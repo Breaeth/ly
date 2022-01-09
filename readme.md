@@ -21,6 +21,9 @@ On Debian-based distros running `apt install build-essential libpam0g-dev libxcb
  - for pam it's pam-devel 
  - for xcb it's libxcb-devel 
 
+## Precision for all the futur user 
+
+ - I've done the change i needed for making work ly on my linux void on 2022, but, this is the work of a 2 or 3h of research for "how can i make this work !" so this this could not work for you sorry 
 
 ## Support
 The following desktop environments were tested with success
