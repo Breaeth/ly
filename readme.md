@@ -73,13 +73,12 @@ sudo make install
 
 Enable the service
 ```
-sudo systemctl enable ly.service
+sudo ln -s /etc/sv/ly-runit-service /var/service/
 ```
 
-If you need to switch between ttys after Ly's start you also have to
-disable getty on Ly's tty to prevent "login" from spawning on top of it
+You can disable getty-tty2
 ```
-sudo systemctl disable getty@tty2.service
+sudo rm /var/service/agetty-tty2
 ```
 
 Add in a .xsession your config in .profile and .xinitrc
