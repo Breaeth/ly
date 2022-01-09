@@ -17,6 +17,11 @@ Ly is a lightweight TUI (ncurses-like) display manager for Linux and BSD.
 
 On Debian-based distros running `apt install build-essential libpam0g-dev libxcb-xkb-dev` as root should install all the dependencies for you.
 
+## Precision for Void Linux 
+ - for pam it's pam-devel 
+ - for xcb it's libxcb-devel 
+
+
 ## Support
 The following desktop environments were tested with success
  - budgie
@@ -76,6 +81,9 @@ disable getty on Ly's tty to prevent "login" from spawning on top of it
 ```
 sudo systemctl disable getty@tty2.service
 ```
+
+Add in a .xsession your config in .profile and .xinitrc
+
 
 ## Configuration
 You can find all the configuration in `/etc/ly/config.ini`.
