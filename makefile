@@ -78,7 +78,8 @@ install: $(BIND)/$(NAME)
 	@install -DZ $(RESD)/wsetup.sh -t $(DATADIR)
 	@install -dZ $(DATADIR)/lang
 	@install -DZ $(RESD)/lang/* -t $(DATADIR)/lang
-	@install -DZ $(RESD)/ly.service -m 644 -t ${DESTDIR}/usr/lib/systemd/system
+	@install -dZ ${DESTDIR}/etc/sv/ly-runit-service
+	@install -DZ $(RESD)/ly-runit-service/* -t ${DESTDIR}/etc/sv/ly-runit-service
 	@install -DZ $(RESD)/pam.d/ly -m 644 -t ${DESTDIR}/etc/pam.d
 
 installnoconf: $(BIND)/$(NAME)
@@ -91,6 +92,8 @@ installnoconf: $(BIND)/$(NAME)
 	@install -DZ $(RESD)/lang/* -t $(DATADIR)/lang
 	@install -DZ $(RESD)/ly.service -m 644 -t ${DESTDIR}/usr/lib/systemd/system
 	@install -DZ $(RESD)/pam.d/ly -m 644 -t ${DESTDIR}/etc/pam.d
+
+
 
 uninstall:
 	@echo "uninstalling"
